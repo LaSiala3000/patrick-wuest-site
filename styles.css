@@ -1,0 +1,395 @@
+:root {
+  color-scheme: light;
+  --paper: #f6f3eb;
+  --ink: #21211e;
+  --muted: #5d594f;
+  --accent: #923d2a;
+  --rule: #cec8bc;
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: ui-monospace, "SFMono-Regular", Consolas, monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 1rem/1.6 var(--sans);
+}
+
+h1, h2, h3, p, ol, ul {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 0.22em;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 1;
+  inset: 0.75rem auto auto 0.75rem;
+  padding: 0.6rem 1rem;
+  transform: translateY(-200%);
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+.frame {
+  width: min(100% - 3rem, 66rem);
+  margin-inline: auto;
+}
+
+.label {
+  font: 0.72rem/1.55 var(--mono);
+  letter-spacing: 0.095em;
+  text-transform: uppercase;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  padding-block: 1.35rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.72rem;
+  width: fit-content;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.monogram {
+  display: inline-grid;
+  place-items: center;
+  width: 2.15rem;
+  height: 2.15rem;
+  border: 1px solid currentColor;
+  color: var(--accent);
+  font: 0.72rem/1 var(--mono);
+  letter-spacing: -0.06em;
+}
+
+.primary-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem clamp(1rem, 3vw, 2rem);
+  font-size: 0.95rem;
+}
+
+.primary-nav a,
+.chapter-footer a {
+  text-decoration: none;
+}
+
+.primary-nav a[aria-current="page"] {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.primary-nav a:hover,
+.chapter-footer a:hover,
+a.wordmark:hover {
+  color: var(--accent);
+}
+
+.cover {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+.cover-header {
+  color: var(--muted);
+}
+
+.location::before {
+  display: inline-block;
+  width: 0.35rem;
+  height: 0.35rem;
+  margin-inline-end: 0.55rem;
+  border-radius: 50%;
+  background: var(--accent);
+  vertical-align: 0.12em;
+  content: "";
+}
+
+.cover-main {
+  align-self: center;
+  width: min(100% - 3rem, 28.5rem);
+  margin-inline: auto;
+  padding-block: clamp(3rem, 8vh, 6rem) clamp(3.75rem, 12vh, 8rem);
+}
+
+.cover-intro {
+  text-align: center;
+}
+
+.cover-intro h1 {
+  font-size: clamp(4.4rem, 13vw, 8.2rem);
+  font-weight: 700;
+  line-height: 0.84;
+  letter-spacing: -0.06em;
+}
+
+.cover-intro h1 span {
+  display: block;
+}
+
+.cover-intro h1 span + span {
+  margin-top: 0.09em;
+}
+
+.cover-intro p {
+  max-width: 23rem;
+  margin: 1.55rem auto 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 2.6vw, 1.16rem);
+  line-height: 1.45;
+  text-wrap: balance;
+}
+
+.contents {
+  margin-top: clamp(2.75rem, 7vh, 4.75rem);
+}
+
+.contents-label {
+  margin-bottom: 0.55rem;
+  color: var(--accent);
+}
+
+.contents ol {
+  padding: 0;
+  border-top: 1px solid var(--rule);
+  list-style: none;
+}
+
+.contents li {
+  border-bottom: 1px solid var(--rule);
+}
+
+.contents a {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  padding: 0.65rem 0.1rem;
+  font-size: clamp(1.15rem, 3vw, 1.4rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  text-decoration: none;
+}
+
+.contents a:hover,
+.contents a:focus-visible {
+  color: var(--accent);
+}
+
+.leader {
+  flex: 1;
+  min-width: 1rem;
+  border-bottom: 1px dotted var(--muted);
+  opacity: 0.7;
+}
+
+.chapter-number {
+  color: var(--accent);
+  font: 0.79rem/1 var(--mono);
+  letter-spacing: 0.06em;
+}
+
+.chapter {
+  padding-block: clamp(3rem, 8vw, 6.75rem) clamp(3rem, 7vw, 6rem);
+}
+
+.chapter-heading {
+  margin-bottom: clamp(2.25rem, 6vw, 4.5rem);
+}
+
+.chapter-kicker {
+  margin-bottom: 0.85rem;
+  color: var(--accent);
+}
+
+.chapter h1 {
+  font-size: clamp(3.8rem, 10.5vw, 8.25rem);
+  line-height: 0.92;
+  letter-spacing: -0.06em;
+}
+
+.chapter-intro {
+  max-width: 34rem;
+  margin-top: 1.35rem;
+  color: var(--muted);
+  font-size: clamp(1.12rem, 2.4vw, 1.38rem);
+  line-height: 1.45;
+  text-wrap: pretty;
+}
+
+.editorial-row {
+  display: grid;
+  grid-template-columns: minmax(8rem, 1fr) minmax(0, 3fr);
+  gap: 0.75rem clamp(1.2rem, 4vw, 3rem);
+}
+
+.side-label {
+  padding-top: 0.4rem;
+  color: var(--accent);
+}
+
+.prose,
+.entry-body {
+  max-width: 43rem;
+}
+
+.prose p + p {
+  margin-top: 1rem;
+}
+
+.prose .lead {
+  max-width: 27ch;
+  margin-bottom: 1.6rem;
+  font-size: clamp(1.65rem, 3.5vw, 2.6rem);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.045em;
+  text-wrap: pretty;
+}
+
+.prose .profile-link {
+  margin-top: 1.75rem;
+}
+
+.text-link {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.text-link:hover {
+  text-decoration-thickness: 2px;
+}
+
+.entry {
+  padding-block: clamp(1.45rem, 4vw, 2.65rem);
+  border-top: 1px solid var(--rule);
+}
+
+.entry-body h2 {
+  font-size: clamp(1.85rem, 4vw, 3rem);
+  line-height: 1.03;
+  letter-spacing: -0.04em;
+  text-wrap: pretty;
+}
+
+.role {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.entry-body ul {
+  margin-block: 0.95rem 1rem;
+  padding-inline-start: 1.25rem;
+}
+
+.entry-body li + li {
+  margin-top: 0.35rem;
+}
+
+.credentials {
+  padding-block: 1.25rem;
+}
+
+.credentials p + p {
+  margin-top: 0.75rem;
+}
+
+.project-index {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.5rem;
+  margin-bottom: 1.4rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.project {
+  scroll-margin-top: 1.4rem;
+}
+
+.project:target {
+  border-top-color: var(--accent);
+}
+
+.project-number {
+  margin-inline-end: 0.75rem;
+}
+
+.project-deck {
+  margin-top: 0.6rem;
+  color: var(--muted);
+  font-size: 1.12rem;
+  line-height: 1.4;
+}
+
+.project h3 {
+  margin-top: 1.25rem;
+  font-size: 1rem;
+}
+
+.project h3 + p {
+  margin-top: 0.25rem;
+}
+
+.chapter-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  padding-block: 1.4rem 2.1rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+@media (max-width: 39rem) {
+  .frame,
+  .cover-main {
+    width: calc(100% - 2rem);
+  }
+
+  .site-header {
+    flex-wrap: wrap;
+    padding-block: 1rem;
+  }
+
+  .primary-nav {
+    width: 100%;
+  }
+
+  .editorial-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .side-label {
+    padding-top: 0;
+  }
+}
