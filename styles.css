@@ -224,11 +224,6 @@ a.wordmark:hover {
   margin-bottom: clamp(2.25rem, 6vw, 4.5rem);
 }
 
-.chapter-kicker {
-  margin-bottom: 0.85rem;
-  color: var(--accent);
-}
-
 .chapter h1 {
   font-size: clamp(3.8rem, 10.5vw, 8.25rem);
   line-height: 0.92;
@@ -253,6 +248,17 @@ a.wordmark:hover {
 .side-label {
   padding-top: 0.4rem;
   color: var(--accent);
+}
+
+.about-portrait {
+  display: block;
+  width: min(100%, 14rem);
+  height: auto;
+}
+
+.about-sidebar .side-label {
+  margin-top: 0.75rem;
+  padding-top: 0;
 }
 
 .prose,
@@ -387,6 +393,10 @@ a.wordmark:hover {
 
   .editorial-row {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .about-portrait {
+    width: min(100%, 10rem);
   }
 
   .side-label {
