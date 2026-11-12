@@ -7,10 +7,10 @@
   <title>Projects · Patrick Wüst</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="interior">
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header frame">
-    <a class="wordmark" href="index.html"><span class="monogram" aria-hidden="true">PW</span><span>Patrick Wüst</span></a>
+  <header class="site-header site-shell">
+    <a class="wordmark" href="index.html">Patrick Wüst</a>
     <nav class="primary-nav" aria-label="Primary">
       <a href="about.html">About Me</a>
       <a href="work.html">Work</a>
@@ -18,21 +18,20 @@
     </nav>
   </header>
 
-  <main class="chapter frame" id="main" tabindex="-1">
-    <header class="chapter-heading">
+  <main class="page-layout site-shell" id="main" tabindex="-1">
+    <header class="page-panel field">
       <h1>Projects</h1>
-      <p class="chapter-intro">A closer look at three areas I’ve led, from consumer AI to advertising measurement.</p>
+      <nav class="project-index" aria-label="On this page">
+        <a href="#venice">Venice AI</a>
+        <a href="#spotify">Spotify</a>
+        <a href="#google">Google</a>
+      </nav>
     </header>
 
-    <nav class="project-index" aria-label="On this page">
-      <a href="#venice">Venice AI <span aria-hidden="true">↓</span></a>
-      <a href="#spotify">Spotify <span aria-hidden="true">↓</span></a>
-      <a href="#google">Google <span aria-hidden="true">↓</span></a>
-    </nav>
-
-    <div class="entry-list">
+    <div class="reading-panel">
+      <p class="reading-intro">A closer look at three areas I’ve led, from consumer AI to advertising measurement.</p>
       <article class="editorial-row entry project" id="venice" aria-labelledby="venice-title">
-        <p class="label side-label"><span class="project-number" aria-hidden="true">01</span>Venice AI</p>
+        <p class="label side-label">Venice AI</p>
         <div class="entry-body prose">
           <h2 id="venice-title">Chat and agent platform</h2>
           <p class="project-deck">Venice is a privacy-first generative AI platform offering text, image, and video models with no data retention.</p>
@@ -48,7 +47,7 @@
       </article>
 
       <article class="editorial-row entry project" id="spotify" aria-labelledby="spotify-title">
-        <p class="label side-label"><span class="project-number" aria-hidden="true">02</span>Spotify</p>
+        <p class="label side-label">Spotify</p>
         <div class="entry-body prose">
           <h2 id="spotify-title">Ads reporting and measurement</h2>
           <p class="project-deck">I owned Spotify’s ads reporting and measurement, from the underlying data pipelines to the tools advertisers used to understand campaign performance.</p>
@@ -68,7 +67,7 @@
       </article>
 
       <article class="editorial-row entry project" id="google" aria-labelledby="google-title">
-        <p class="label side-label"><span class="project-number" aria-hidden="true">03</span>Google</p>
+        <p class="label side-label">Google</p>
         <div class="entry-body prose">
           <h2 id="google-title">Conversion measurement</h2>
           <p class="project-deck">Connecting what advertisers measure in Google Analytics with how they bid and optimize in Google Ads.</p>
@@ -83,9 +82,5 @@
     </div>
   </main>
 
-  <footer class="chapter-footer frame">
-    <a href="index.html"><span aria-hidden="true">←</span> Contents</a>
-    <a href="work.html">Work <span aria-hidden="true">→</span></a>
-  </footer>
 </body>
 </html>

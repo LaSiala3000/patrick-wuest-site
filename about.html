@@ -7,10 +7,10 @@
   <title>About Me · Patrick Wüst</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="interior">
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header frame">
-    <a class="wordmark" href="index.html"><span class="monogram" aria-hidden="true">PW</span><span>Patrick Wüst</span></a>
+  <header class="site-header site-shell">
+    <a class="wordmark" href="index.html">Patrick Wüst</a>
     <nav class="primary-nav" aria-label="Primary">
       <a href="about.html" aria-current="page">About Me</a>
       <a href="work.html">Work</a>
@@ -18,17 +18,15 @@
     </nav>
   </header>
 
-  <main class="chapter frame" id="main" tabindex="-1">
-    <header class="chapter-heading">
+  <main class="page-layout site-shell" id="main" tabindex="-1">
+    <header class="page-panel about-panel field">
       <h1>About Me</h1>
+      <p class="location">Based in New York</p>
     </header>
 
-    <div class="editorial-row">
-      <div class="about-sidebar">
+    <div class="reading-panel">
+      <div class="reading-content prose">
         <img class="about-portrait" src="portrait.png" width="512" height="512" alt="Portrait of Patrick Wüst">
-        <p class="label side-label">Based in New York</p>
-      </div>
-      <div class="prose">
         <p class="lead">I lead product teams that turn complex models and infrastructure into tools people can rely on.</p>
         <p>At Venice AI, I lead product strategy for chat and agents, including how people work with different models, use connectors, and pick up conversations across devices.</p>
         <p>Before Venice, I led product teams at Spotify building ML-powered measurement and attribution for advertisers. At Google, I worked on Analytics and conversion measurement, connecting what advertisers could learn about performance with how they optimized campaigns.</p>
@@ -38,9 +36,5 @@
     </div>
   </main>
 
-  <footer class="chapter-footer frame">
-    <a href="index.html"><span aria-hidden="true">←</span> Contents</a>
-    <a href="work.html">Work <span aria-hidden="true">→</span></a>
-  </footer>
 </body>
 </html>
