@@ -106,7 +106,7 @@ a:focus-visible {
 }
 
 .cover-intro h1 {
-  font-size: clamp(2.65rem, 7.3vw, 7.1rem);
+  font-size: clamp(2.385rem, 6.57vw, 6.39rem);
   font-weight: 600;
   letter-spacing: -0.055em;
   line-height: 0.9;
